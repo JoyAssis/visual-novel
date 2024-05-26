@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 56, in script
+    jump present_educational
+ScriptError: could not find label 'present_educational'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 56, in script
+    jump present_educational
+  File "C:\Users\vnw-a\Desktop\renpy-8.2.1-sdk\renpy\ast.py", line 1698, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\vnw-a\Desktop\renpy-8.2.1-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'present_educational'.
+
+Windows-10-10.0.22621 AMD64
+Ren'Py 8.2.1.24030407
+Caminhos 1.0
+Sat May 25 18:59:50 2024

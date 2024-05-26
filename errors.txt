@@ -1,0 +1,14 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 26: end of line expected.
+    show e irma.png
+               ^
+
+File "game/script.rpy", line 27: end of line expected.
+    show c irmão.png
+                ^
+
+Ren'Py Version: Ren'Py 8.2.1.24030407
+Sat May 25 19:01:14 2024
