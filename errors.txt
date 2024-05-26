@@ -2,13 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 26: end of line expected.
-    show e irma.png
-               ^
+File "game/script.rpy", line 6: invalid syntax
+    Character("Sora", color"#D10363")
+                            ^
 
-File "game/script.rpy", line 27: end of line expected.
-    show c irmão.png
-                ^
+File "game/script.rpy", line 7: invalid syntax
+    Character("Rocco", color"#028391")
+                             ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Sat May 25 19:01:14 2024
+Sun May 26 12:42:43 2024

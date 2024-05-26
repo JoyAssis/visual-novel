@@ -4,6 +4,11 @@
 
 "Caminhos" é um visual novel que aborda a falta de incentivo e a complexidade na entrada no mercado de trabalho gamer e tech, especialmente para mulheres. A história segue dois irmãos, um que recebe incentivo e outra que não, explorando suas jornadas de crescimento e busca por seu lugar no mundo.
 
+## Equipe 344
+Integrantes
+Negócios: Kayná (São Paulo)
+Designer: Emanuelly (Rio de Janeiro), Thaís(Bahia)
+Desenvolvedora: Joy Assis (São Paulo)
 ## Tecnologias Utilizadas
 
 - **Linguagem de Programação**: Python
