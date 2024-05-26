@@ -55,7 +55,7 @@ define gui.muted_color = '#510028'
 define gui.hover_muted_color = '#7a003d'
 
 ## As cores usadas para o diálogo e o texto da opção de menu.
-define gui.text_color = '#9510AC'
+define gui.text_color = '#ffff'
 define gui.interface_text_color = '#9510AC'
 
 
@@ -77,7 +77,7 @@ define gui.text_size = 33
 define gui.name_text_size = 45
 
 ## O tamanho do texto na interface de usuário do jogo.
-define gui.interface_text_size = 33
+define gui.interface_text_size = 30
 
 ## O tamanho dos rótulos na interface de usuário do jogo.
 define gui.label_text_size = 36
@@ -102,7 +102,7 @@ define gui.game_menu_background = "images/boy.jpg"
 ## vez.
 
 ## A altura da caixa de texto que contém o diálogo.
-define gui.textbox_height = 278
+define gui.textbox_height = 280
 
 ## O posicionamento da caixa de texto verticalmente na tela. 0,0 é a parte
 ## superior, 0,5 é o centro e 1,0 é a parte inferior.
@@ -136,16 +136,34 @@ define gui.namebox_tile = False
 ## O posicionamento do diálogo em relação à caixa de texto. Esse pode ser um
 ## número inteiro de pixels em relação ao lado esquerdo ou superior da caixa de
 ## texto, ou 0,5 em relação ao centro.
-define gui.dialogue_xpos = 402
-define gui.dialogue_ypos = 75
+define gui.dialogue_xpos = 470
+define gui.dialogue_ypos = 65
 
 ## A largura máxima do texto da caixa de diálogo, em pixels.
-define gui.dialogue_width = 1116
+define gui.dialogue_width = 1600
 
 ## O alinhamento horizontal do texto da caixa de diálogo. Pode ser 0,0 para
 ## alinhado à esquerda, 0,5 para centralizado e 1,0 para alinhado à direita.
-define gui.dialogue_text_xalign = 0.0
+define gui.dialogue_text_xalign = 0.1
+## The amount of padding around the dialogue, in pixels.
+define gui.dialogue_text_padding = 15
 
+## The minimum height of the dialogue window, in pixels.
+define gui.dialogue_height = 200
+
+## The amount of spacing between lines of dialogue, in pixels.
+define gui.dialogue_line_spacing = 6
+
+## The distance between the dialogue and the choices, in pixels.
+define gui.dialogue_choice_spacing = 20
+
+## The distance between the choices and the edges of the screen, in pixels.
+define gui.choice_xpadding = 20
+define gui.choice_ypadding = 20
+
+## The size of the dialogue window's left padding, right padding, top
+## padding, and bottom padding, respectively.
+define gui.dialogue_padding = (20, 20, 20, 20)
 
 ## Botões ######################################################################
 ##

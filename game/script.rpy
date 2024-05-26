@@ -3,8 +3,8 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define g = Character("Sora")
-define b = Character("Rocco")
+define g = Character("Sora", color="#D10363")
+define b = Character("Rocco", color="#028391")
 define u = Character("você")
 define n = Character("...")
 
@@ -25,7 +25,7 @@ label start:
 
     n "O ano é 1998 e Rocco, que tem apenas 1 ano e 3 meses de idade, ganha uma irmãzinha."
     show irmao
-    n: "O tempo enquanto filho único foi tão pouco que não houve grandes ajustes na rotina de ninguém, não houve necessidade de adaptação nenhuma. Desde que se entende por gente, possui um grande laço de amor com sua irmãzinha. Os jovens pais os amam incondicionalmente e fazem de tudo, de acordo com suas próprias capacidades, para que seus filhos sejam felizes."
+    n "O tempo enquanto filho único foi tão pouco que não houve grandes ajustes na rotina de ninguém, não houve necessidade de adaptação nenhuma. Desde que se entende por gente, possui um grande laço de amor com sua irmãzinha. Os jovens pais os amam incondicionalmente e fazem de tudo, de acordo com suas próprias capacidades, para que seus filhos sejam felizes."
     show irma
     menu: 
         "Vamos começar!":
@@ -38,82 +38,92 @@ label chapter_1:
      #scene sala
     
     n "4 anos depois, durante os preparativos para o Natal, é tempo de escolher os presentes."
-    n "As crianças terminam a refeição, a mãe pede a birina que a ajude a recolher a mesa."
-
     hide irma
-    hide irmao
-
-    p "Crianças, hoje vocês podem escolher um presente especial. Qual vocês querem?"
+    hide irmao 
+    n "As crianças terminam a refeição, a mãe pede a Sora que a ajude a recolher a mesa."
+    n "Sora ajuda a mãe?"
     
     menu:
-        "Irmão ganha um videogame, irmã ganha uma boneca":
-            jump present_boy_videogame_girl_doll
+        "Sim":
+            jump present_girl_yes_boy_no
     
-        "Irmã ganha um videogame, irmão ganha uma boneca":
-            jump present_girl_videogame_boy_doll
+        "Não":
+            jump present_girl_no_boy_yes
 
-# Consequências para o presente: irmão recebe videogame, irmã recebe boneca
-label present_boy_videogame_girl_doll:
-    show irmao
-    c "Um videogame! Isso vai ser incrível!"
-    hide irmao
-
-    show irma
-    e "Eu ganhei uma boneca... legal."
-    hide irma
-
-    p "Divirtam-se com seus presentes, crianças."
-
-    # Consequências do presente
-    show irmao
-    c "O videogame realmente me inspirou a aprender mais sobre tecnologia."
-    hide irmao
-    show irma
-    e "Eu me sentia limitada com a boneca."
-
-    # Pulando para o futuro
-    # jump future_boy_tech_girl_limited
-
-# Consequências para o presente: irmã recebe videogame, irmão recebe boneca
-label present_girl_videogame_boy_doll:
-    show irma
-    e "Um videogame! Isso vai ser incrível!"
+# Consequências para o presente: Sora ajuda a mão
+label present_girl_yes_boy_no:
+    g "Claro, mãe. Eu ajudo a recolher a mesa."
+    n "Enquanto Sora ajuda a mãe, Rocco vai tomar seu banho. No caminho ele se distrai com um minigame que estava no chão do corredor e começa a jogar tetris."
     hide irma
     show irmao
-    c "Eu ganhei uma boneca... legal."
-    hide irmao
-    p "Divirtam-se com seus presentes, crianças."
+    n "Quando Sora vai tomar banho, Rocco que já deveria estar de banho tomado ainda está jogando tetris."
+    
+    menu:
+        n "O que a mãe deve fazer?"
+        "Insistir":
+            jump insistir_banho_irmao
+        "Dar banho nas duas crianças":
+            jump banho_duas_criancas
 
-    # Consequências do presente
+label present_girl_no_boy_yes:
+    b "Deixa que eu ajudo mãe!" 
+    n "Diz Rocco. Sora vai tomar banho. No caminho Sora se distrai com um minigame que estava no chão do corredor e começa a jogar tetris."
+    hide irmao
     show irma
-    e "O videogame realmente me inspirou a aprender mais sobre tecnologia."
+    n "Quando Rocco vai tomar banho, Sora que já deveria estar de banho tomado ainda está jogando tetris."
+    n "O que a mãe deve fazer?"
+    menu:
+        "Insistir":
+            jump insistir_banho_irmao
+        "Dar banho nas duas crianças":
+            jump banho_duas_criancas
+
+label insistir_banho_irmao:
+    n "A mãe dá banho em Sora e pede que o pai leve Rocco para tomar banho também, mas o pai diz que está assistindo TV. Ela explica que ainda precisa se arrumar, e ele continua dizendo que não vai, que já está pronto e não quer se molhar."
+    n "O que a mãe deve fazer?"
+    menu:
+        "Insistir":
+            jump insistir_final
+    
+        "Dar banho nas duas crianças":
+            jump banho_duas_criancas_final
+
+label insistir_final:
+    n "O pai sai da frente da TV gritando com Rocco, que se assusta, e derruba o minigame no chão. O pai dá banho na criança, de forma impaciente, enquanto o menino chora."
+
+label banho_duas_criancas_final:
+    n "Depois de dar banho nas duas crianças, a mãe vai se arrumar."
+
+label banho_duas_criancas:
+    n "O pai sai da frente da TV resmungando, pega o minigame da mão de Rocco e leva para o banho. O pai dá banho na criança em silêncio, mas seu rosto transparece impaciência."
+
+label loja_brinquedos:
+    #scene loja de brinquedo
+    n "Quando todos estão prontos, eles seguem juntos para a loja de brinquedos."
+    n "Os pais decidem se separar para comprar os presentes." 
+    n "Com quem Sora vai escolher seu presente?"
+    show irma
+    menu:
+        "Com o pai":
+            jump brinquedo_com_pai
+        "Com a mãe":
+            jump brinquedo_com_mae
+    
+label brinquedo_com_pai:
+    #scene corredor de bonecas
+    show irma
+    n "Que brinquedo Sora vai escolher?"
     hide irma
-    show irmao
-    c "Eu me sentia limitado com a boneca."
-    hide irmao
+    menu:
+        "Uma boneca bebe":
+            jump fim_cena
+        "Uma boneca com kit de cozinha":
+            jump fim_cena
+    show irma #com a boneca?
+label fim_cena:
+    #scene  presentes 
+    n "Sora gostou muito de seu presente! Seu irmão Rocco escolheu um console de videogame"
 
-    # Pulando para o futuro
-    # jump future_girl_tech_boy_limited
-
-# # Futuro: irmão inspirado em tecnologia, irmã se sentindo limitada
-# label future_boy_tech_girl_limited:
-#     scene bg_room_future
-#     show irmao
-#     c "Graças ao videogame, eu decidi seguir carreira em tecnologia."
-#     show irma
-#     e "Me senti limitada pela boneca e tive dificuldade em encontrar meu caminho."
-
-#     return
-
-# # Futuro: irmã inspirada em tecnologia, irmão se sentindo limitado
-# label future_girl_tech_boy_limited:
-#     scene bg_room_future
-#     show irma
-#     e "Graças ao videogame, eu decidi seguir carreira em tecnologia."
-#     show irmao
-#     c "Me senti limitado pela boneca e tive dificuldade em encontrar meu caminho."
-
-
+         
     # This ends the game.
-
     return
