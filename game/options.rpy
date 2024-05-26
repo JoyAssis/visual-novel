@@ -64,7 +64,7 @@ define config.has_voice = True
 ## continuará sendo reproduzido no jogo até que seja interrompido ou outro
 ## arquivo seja reproduzido.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "audio/EternalBond_main_menu.mp3"
 
 
 ## Transições ##################################################################
