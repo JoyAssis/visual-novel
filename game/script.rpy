@@ -3,7 +3,7 @@
 # name of the character.
 
 define g = Character("Sora", color="#D10363")
-define b = Character("Rocco", color="#028391")
+define b = Character("Rocco", color="#D1D8C5")
 define u = Character("você")
 define n = Character("...")
 
@@ -122,7 +122,7 @@ label present_girl_no_boy_yes:
     menu:
         n "O que a mãe deve fazer?"
         "Insistir":
-            jump insistir_banho_irmao
+            jump insistir_banho_irma
         "Dar banho nas duas crianças":
             jump banho_duas_criancas
  ## fim sala natal ###########################################################################################
@@ -158,6 +158,30 @@ label banho_duas_criancas:
     play audio skip
     hide irmao
     jump loja_brinquedos
+    ## não ##################################################################
+    label insistir_banho_irma:
+    hide irmao
+    n "A mãe dá banho em Rocco e pede que o pai leve Sora para tomar banho também, mas o pai diz que está assistindo TV. Ela explica que ainda precisa se arrumar, e ele continua dizendo que não vai, que já está pronto e não quer se molhar."
+    play audio skip
+    
+    menu:
+        n "O que a mãe deve fazer?"
+        "Insistir":
+            play audio mouse_selection
+            jump insistir_final2
+    
+        "Dar banho nas duas crianças":
+            play audio mouse_selection
+            jump banho_duas_criancas_final
+
+label insistir_final2:
+    show irmao
+    #show rocco chorando
+    n "O pai sai da frente da TV resmungando, pega o minigame da mão de Sora e a leva para o banho. O pai dá banho na criança em silêncio, mas seu rosto transparece impaciência."
+    play audio skip
+    jump loja_brinquedos
+
+
     ## fim banho ###########################################################################################
     
     ## inicio loja de brinquedo ############################################################################
@@ -229,8 +253,8 @@ label chama_para_jogar:
     jump jogando
 
 label jogando:
-   #scene jogando adolecentes no quarto
-   n "jogando juntos no quarto"
+   scene continua
+   n "em construção, agora eles estarão em uma nova fase e a concequência da suas escolhas ditará o próximo caminho."
    play audio skip
 
 return
