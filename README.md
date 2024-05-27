@@ -1,8 +1,11 @@
-# Caminhos
+# Fraternna
 
 ## Descrição
 
-"Caminhos" é um visual novel que aborda a falta de incentivo e a complexidade na entrada no mercado de trabalho gamer e tech, especialmente para mulheres. A história segue dois irmãos, um que recebe incentivo e outra que não, explorando suas jornadas de crescimento e busca por seu lugar no mundo.
+"Fraternna" é um visual novel que aborda a falta de incentivo e a complexidade na entrada no mercado de trabalho gamer e tech, especialmente para mulheres. A história segue dois irmãos, um que recebe incentivo e outra que não, explorando suas jornadas de crescimento e busca por seu lugar no mundo.
+
+### O jogo
+Esta é a história de dois irmãos e de seu grande companheirismo pelas diversas fases da vida. Não há inimigos e vilões, se não a sociedade que, por diversas vezes coloca Sora em uma posição de cuidados com o lar e com outrem enquanto Rocco tem tempo e incentivo para florescer sua criatividade a engajar em mais atividades que o satisfaçam. 
 
 ## Equipe 344
 Integrantes
@@ -70,7 +73,4 @@ Desenvolvedora: Joy Assis (São Paulo)
 
 Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## Contato
-
-Para mais informações, entre em contato com [seu-email@exemplo.com](mailto:seu-email@exemplo.com).
 

@@ -12,7 +12,7 @@
 ##
 ## O _() ao redor da string a marca como elegível para tradução.
 
-define config.name = _("Caminhos")
+define config.name = _("Fraternna")
 
 
 ## Determina se o título fornecido acima será mostrado na tela do menu

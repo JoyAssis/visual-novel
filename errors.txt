@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 6: invalid syntax
-    Character("Sora", color"#D10363")
-                            ^
-
-File "game/script.rpy", line 7: invalid syntax
-    Character("Rocco", color"#028391")
-                             ^
+File "game/gui.rpy", line 255: style property shadow is not known.
+    shadow = [(2, 2), "#00000088"]
+          ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Sun May 26 12:42:43 2024
+Sun May 26 21:01:33 2024

@@ -27,26 +27,26 @@ define config.check_conflicting_properties = True
 
 ## Uma cor de destaque usada em toda a interface para rotular e destacar o
 ## texto.
-define gui.accent_color = '#FBB285'
+define gui.accent_color = '#FFFAE6'
 
 ## A cor usada para um botão de texto quando ele não está selecionado nem passa
 ## o mouse.
-define gui.idle_color = '#FBB285'
+define gui.idle_color = '#8338ec'
 
 ## A cor pequena é usada para texto pequeno, que precisa ser mais claro/escuro
 ## para obter o mesmo efeito.
-define gui.idle_small_color = '#8338ec'
+define gui.idle_small_color = '#FFFF'
 
 ## A cor que é usada para botões e barras que passam pelo mouse.
-define gui.hover_color = '#8338ec'
+define gui.hover_color = '#FF9F66'
 
 ## A cor usada em um botão de texto quando ele está selecionado, mas não
 ## focalizado. Um botão estará selecionado se for a tela atual ou o valor de
 ## preferência.
-define gui.selected_color = '#8338ec'
+define gui.selected_color = '#FFB38E'
 
 ## A cor usada para um botão de texto quando ele não pode ser selecionado.
-define gui.insensitive_color = '#3a86ff'
+define gui.insensitive_color = '#B4B4B8'
 
 ## Cores usadas para as partes das barras que não estão preenchidas. Elas não
 ## são usadas diretamente, mas são usadas ao gerar novamente os arquivos de
@@ -62,7 +62,7 @@ define gui.interface_text_color = '#9510AC'
 ## Fontes e tamanhos de fonte ##################################################
 
 ## A fonte usada para o texto do jogo.
-define gui.text_font = "DejaVuSans.ttf"
+define gui.text_font = "RadioStars.ttf"
 
 ## A fonte usada para os nomes dos caracteres.
 define gui.name_text_font = "RadioStars.ttf"
@@ -92,8 +92,8 @@ define gui.title_text_size = 75
 ## Menus principal e de jogos ##################################################
 
 ## As imagens usadas nos menus principal e de jogo.
-define gui.main_menu_background = "images/menu_bg.jpg"
-define gui.game_menu_background = "images/boy.jpg"
+define gui.main_menu_background = "images/menu_bg.png"
+define gui.game_menu_background = "images/sala2.png"
 
 
 ## Diálogo #####################################################################
@@ -224,22 +224,32 @@ define gui.quick_button_text_selected_color = gui.accent_color
 ## linha para definir a largura de um botão de navegação.
 
 # define gui.navigation_button_width = 250
+## progress bar ####################################################
+style progress_bar:
+    xminimum 200
+    yminimum 25
+    left_bar Frame("gui/left.png", 10, 0)
+    right_bar Frame("gui/right.png", 10, 0)
 
+style progress_bar_text:
+    color "#FFFFFF"
+    xalign 0.5
+    yalign 0.5
 
 ## Botões de escolha ###########################################################
 ##
 ## Os botões de escolha são usados nos menus do jogo.
 
 define gui.choice_button_width = 1185
-define gui.choice_button_height = None
+define gui.choice_button_height = 50
 define gui.choice_button_tile = False
 define gui.choice_button_borders = Borders(150, 8, 150, 8)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = '#888888'
-define gui.choice_button_text_hover_color = "#ffffff"
-define gui.choice_button_text_insensitive_color = '#8888887f'
+define gui.choice_button_text_idle_color = '#FFB38E'
+define gui.choice_button_text_hover_color = "#ffff"
+define gui.choice_button_text_insensitive_color = '#FFB38E'
 
 
 ## Botões de slot de arquivo ###################################################
@@ -430,7 +440,7 @@ define gui.nvl_thought_width = 1170
 define gui.nvl_thought_xalign = 0.0
 
 ## A posição dos botões de menu nvl.
-define gui.nvl_button_xpos = 675
+define gui.nvl_button_xpos = 400 ## 675 mudei
 define gui.nvl_button_xalign = 0.0
 
 
